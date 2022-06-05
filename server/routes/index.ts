@@ -2,42 +2,39 @@ import express from 'express';
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', // <- when we get this one
-//controller
+router.get('/',
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
-  res.render/*generate*/('index', { title: 'Home' /*object*/, page: 'home'});
+  res.render('index', { title: 'Home', page: 'home'});
 });
-
-
 router.get('/home',
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
   res.render('index', { title: 'Home', page: 'home'});
 });
 
-
+/* GET About Me page. */
 router.get('/about', 
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
   res.render('index', { title: 'About Me', page: 'about'});
 });
 
-
+/* GET Projects page. */
 router.get('/projects', 
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
   res.render('index', { title: 'My projects', page: 'projects'});
 });
 
-
+/* GET Services page. */
 router.get('/services', 
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
   res.render('index', { title: 'My Services', page: 'services'});
 });
 
-
+/* GET Contact page. */
 router.get('/contact', 
 function(req : express.Request, res: express.Response, next: express.NextFunction) 
 {

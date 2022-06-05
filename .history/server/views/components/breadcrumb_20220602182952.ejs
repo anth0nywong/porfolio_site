@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+       <ol class="col-12 breadcrumb">
+           <li class="breadcrumb-item">
+            <% if (page != "home") { %> <a  href="/home" title="home">Home</a></li><% } else { %><p>Home</p><% } %>
+              
+           </li>
+           <!-- <li class="breadcrumb-item"></li> -->
+            <% if (page != "home") { %><li class="breadcrumb-item"><%= title %></li><% } else { %><% } %>
+       </ol>
+   </div>
+</div>
