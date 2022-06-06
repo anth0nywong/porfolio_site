@@ -21,7 +21,7 @@ router.get('/services', function (req, res, next) {
     res.render('index', { title: 'My Services', page: 'services' });
 });
 router.get('/contact', function (req, res, next) {
-    res.render('index', { title: 'Contact Me', page: 'contact' });
+    res.render('view2', { title: 'Contact Me', page: 'contact' });
 });
 exports.default = router;
 //# sourceMappingURL=index.js.map
