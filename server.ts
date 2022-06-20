@@ -1,27 +1,33 @@
+#!/usr/bin/env node
+
 import app from './server/config/app';
 import debug from 'debug';
-debug('lesson3:server');
+debug('assignment2:server');
 import http from 'http';
 import { HttpError } from 'http-errors';
 import { AddressInfo } from 'net';
 
+
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
- 
+
+
 const server = http.createServer(app);
 
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-function normalizePort(val:string) {
-  let port = parseInt(val, 10);
+function normalizePort(val) {
+  var port = parseInt(val, 10);
 
   if (isNaN(port)) {
+    // named pipe
     return val;
   }
 
   if (port >= 0) {
+    // port number
     return port;
   }
 
@@ -33,9 +39,11 @@ function onError(error: HttpError) {
     throw error;
   }
 
-  let bind = typeof port === 'string'
+const bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
@@ -50,10 +58,6 @@ function onError(error: HttpError) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
 function onListening() {
   let addr = server.address() as string | AddressInfo;
   let bind = typeof addr === 'string'
@@ -61,18 +65,3 @@ function onListening() {
     : 'port ' + addr.port;
   console.debug('Listening on ' + bind);
 }
-
-// import express from 'express';
-
-// const app = express();
-// const port = 3000;
-
-// app.get('/', (req, res) =>
-// {
-// res.send('Hello World!');
-// });
-
-// app.listen(port, () => 
-// {
-// console.log(`Example app listening on port ${port}`);
-// });

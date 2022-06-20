@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -5,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./server/config/app"));
 const debug_1 = __importDefault(require("debug"));
-(0, debug_1.default)('lesson3:server');
+(0, debug_1.default)('assignment2:server');
 const http_1 = __importDefault(require("http"));
 const port = normalizePort(process.env.PORT || '3000');
 app_1.default.set('port', port);
@@ -14,7 +15,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 function normalizePort(val) {
-    let port = parseInt(val, 10);
+    var port = parseInt(val, 10);
     if (isNaN(port)) {
         return val;
     }
@@ -27,7 +28,7 @@ function onError(error) {
     if (error.syscall !== 'listen') {
         throw error;
     }
-    let bind = typeof port === 'string'
+    const bind = typeof port === 'string'
         ? 'Pipe ' + port
         : 'Port ' + port;
     switch (error.code) {

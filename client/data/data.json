@@ -1,6 +1,7 @@
 {
-    "FullName": "Anthony Wong",
-    "ContactNumber": "1233123123",
-    "EmailAddress": "wong95218@gmail.com"
-
+    "DisplayName": "anthony wong",
+    "EmailAddress": "wong@gmail.com",
+    "Created": "2022-06-15T18:50:09.536Z",
+    "Updated": "2022-06-15T18:50:09.536Z",
+    "username": "wong123"
 }
