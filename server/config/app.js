@@ -41,6 +41,7 @@ let localStrategy = passport_local_1.default.Strategy;
 const index_1 = __importDefault(require("../routes/index"));
 const movie_1 = __importDefault(require("../routes/movie"));
 const auth_1 = __importDefault(require("../routes/auth"));
+const router_business_1 = __importDefault(require("../routes/router.business"));
 const app = (0, express_1.default)();
 const user_js_1 = __importDefault(require("../models/user.js"));
 const DBConfig = __importStar(require("./db"));
@@ -71,6 +72,7 @@ passport_1.default.deserializeUser(user_js_1.default.deserializeUser());
 app.use('/', index_1.default);
 app.use('/', movie_1.default);
 app.use('/', auth_1.default);
+app.use('/', router_business_1.default);
 app.use(function (req, res, next) {
     next((0, http_errors_1.default)(404));
 });

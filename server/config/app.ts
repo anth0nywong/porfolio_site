@@ -24,6 +24,7 @@ let localStrategy = passportLocal.Strategy;
 import indexRouter from '../routes/index';
 import movieRouter from '../routes/movie';
 import authRouter from '../routes/auth';
+import businessRouter from '../routes/router.business';
 
 const app = express();
 
@@ -44,7 +45,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../client')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
@@ -73,6 +74,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/', movieRouter);
 app.use('/', authRouter);
+app.use('/', businessRouter);
 
 
 // catch 404 and forward to error handler

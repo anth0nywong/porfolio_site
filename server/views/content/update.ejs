@@ -1,0 +1,58 @@
+<!-- File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022 -->
+
+<!-- Update View -->
+<div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6 col-sm-12">
+            <div class="login" id="contentArea">
+                <!-- Title -->
+                <h1 class="display-4"><%= title %></h1>
+
+                <!-- Form Section -->
+                <form method="POST" id="update" novalidate>
+                  <p class="hint-text"></p>
+                  <div class="form-group">
+                    <div class="row">
+                      <p class="lead"><i class="fas fa-user-shield"></i> Records</p>
+                      <div class="col-md-12">
+                        <input class="form-control" type="text" name="contactName" id="contactName" placeholder="Contact Name" value="<%= business.contactName %>" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="tel" class="form-control" id="contactNumber" 
+                        name="contactNumber" value="<%= business.contactNumber %>" 
+                        placeholder="Contact Number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" required>
+                      </div>
+                    </div>
+                  </div>  
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="email" class="form-control" id="emailAddress" name="emailAddress" required
+                        value="<%= business.emailAddress %>" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>                          
+                  <div class="text-end mt-2">
+                    <button id="submitButton" type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Update</button>
+                    <a id="cancelButton" class="btn btn-warning" href="/business-contact">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                    <a type="button" class="btn btn-danger" href="/delete/<%= business._id%>">
+                        <i class="fa-solid fa-xmark"></i> Delete
+                    </a>
+                  </div>
+                </form>
+              
+            </div>
+      </div>
+    </div>
+  </div>    

@@ -1,3 +1,8 @@
+// File name: Assignment2
+// Student Name : Hok Hei Wong
+// StudentID : 301193519
+// Date: June 20, 2022import express from 'express';
+
 import express from 'express';
 import passport from 'passport';
 
@@ -11,7 +16,7 @@ export function DisplayLoginPage(req : express.Request, res: express.Response, n
     {
         res.render('index', {title: 'Login', page:'login', messages: req.flash('loginMessages'), displayName: UserDisplayName(req)});
     }
-    return res.redirect('/movie-list');
+    return res.redirect('/business-contact');
 };
 export function DisplayRegisterPage(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
@@ -19,7 +24,7 @@ export function DisplayRegisterPage(req : express.Request, res: express.Response
     {
         res.render('index', {title: 'Register', page:'register', messages: req.flash('registerMessages'), displayName: UserDisplayName(req)});
     }
-    return res.redirect('/movie-list');
+    return res.redirect('/business-contact');
 };
 
 export function ProcessLoginPage(req : express.Request, res: express.Response, next: express.NextFunction) 
@@ -48,10 +53,11 @@ export function ProcessLoginPage(req : express.Request, res: express.Response, n
                 console.error(err);
                 res.end(err);
             }
-            return res.redirect('/movie-list');
+            return res.redirect('/business-contact');
         });
     })(req, res, next); //Self-calling function
 };
+
 export function ProcessRegisterPage(req : express.Request, res: express.Response, next: express.NextFunction) 
 {
     // instantiate a new user object
@@ -78,13 +84,12 @@ export function ProcessRegisterPage(req : express.Request, res: express.Response
             res.redirect('/register');
         };
 
-        //automatically login the user and go to movie-list page
+        //automatically login the user and go to business contact page
         return passport.authenticate('local')(req, res, function()
         {
-            res.redirect('/movie-list');
+            res.redirect('/business-contact');
         });
     }) 
-    
 };
 export function ProcessLogoutPage(req : express.Request, res: express.Response, next: express.NextFunction) 
 {

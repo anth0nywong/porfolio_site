@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+// File: Assignment2
+// Student Name : Hok Hei Wong
+// StudentID : 301193519
+// Date: June 20, 2022
+
+
+
 import app from './server/config/app';
 import debug from 'debug';
 debug('assignment2:server');

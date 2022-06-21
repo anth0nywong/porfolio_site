@@ -1,0 +1,49 @@
+<!-- File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022-->
+
+<div class="container">
+    <h1><%= title %></h1>
+
+    <!-- Message Area -->
+    <% if(messages.length > 0) { %>
+        <div id="messageArea" class="alert alert-danger">
+        <%= messages %>
+      </div>
+      <% } %>
+
+    <div class="row">
+        <div class="col">
+
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" class="text-center">#</th>
+                        <th scope="col">Contact Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Email Address</th>   
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody id="bussiness-contact">
+                    <!-- Repeatable Rows -->
+                    <% for(let count=0; count < business.length; count++){   %>
+                        <tr>
+                            <th scope="row" class="text-center"><%= count + 1%></th>
+                            <td><%= business[count].contactName %></td>
+                            <td><%= business[count].contactNumber %></td>
+                            <td><%= business[count].emailAddress %></td>
+                            <td>
+                                <div class="btn-group mr-2" role="group" aria-label="Options">
+                                    <a type="button" class="btn btn-primary" href="/update/<%= business[count]._id%>">update</a>
+                                    <a type="button" class="btn btn-warning" href="/delete/<%= business[count]._id%>">delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <%  }   %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

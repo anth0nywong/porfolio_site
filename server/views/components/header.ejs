@@ -1,10 +1,17 @@
+<!-- File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022-->
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-left" >
     <div class="container-fluid">
+       <!-- Icon-->
       <a class="navbar-brand" href="/"><img src="/assets/images/icons8-a-96.png" style="background-color:white; margin-right:2px; margin-bottom: 5px;" alt="Page icon" width="36" height="36">nthony Wong Hok Hei Personal Website</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <!-- Navigation Links Section-->
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
@@ -20,19 +27,25 @@
             <a class="nav-link <%= (page== 'services')? 'active' : ''; %>" aria-current="page" href="/services"> <i class="fa-solid fa-signs-post fa-lg"></i> Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <%= (page== 'contact')? 'active' : ''; %>" aria-current="page" href="/contact"> <i class="fa-solid fa-user-pen fa-lg"></i></i> Contact Me</a>
+            <a class="nav-link <%= (page== 'contact')? 'active' : ''; %>" aria-current="page" href="/contact"> <i class="fa-solid fa-user-pen fa-lg"></i> Contact Me</a>
           </li>
+          <!-- If display name exist, display the following links-->
           <% if(displayName) { %>
 
             <li class="nav-item">
-              <a class="nav-link <%= (page== 'movie-list')? 'active' : ''; %>" aria-current="page" href="/movie-list"> <i class="fa-solid fa-table-list fa-lg"></i></i> Movie List</a>
+              <a class="nav-link <%= (page== 'movie-list')? 'active' : ''; %>" aria-current="page" href="/movie-list"> <i class="fa-solid fa-table-list fa-lg"></i> Movie List</a>
             </li>
-  
+
+            <li class="nav-item">
+              <a class="nav-link <%= (page== 'business-contact')? 'active' : ''; %>" aria-current="page" href="/business-contact"> <i class="fa-solid fa-user-tie  fa-lg"></i> Business Contacts</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link <%= (page== 'logout')? 'active' : ''; %>" aria-current="page" href="/logout"> <i class="fa-solid fa-right-from-bracket fa-lg"></i></i> Logout</a>
             </li>
+            <!-- Display user name-->
             <a aria-current="page" href="/home" title="home"> 
-              <div class="btn btn-secondary"><%= displayName %>
+              <div class="btn btn-secondary" style="font-size:small ">Hello, <%= displayName %>
               </div>
             </a>
           <% } else { %>

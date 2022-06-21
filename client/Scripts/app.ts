@@ -1,6 +1,11 @@
+/* File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022*/
 
 
 //IIFE immediately invoked function expression
+//This is only for testing whether client side script is working
 (function()
 {
     function Start()
