@@ -15,4 +15,8 @@
     }
     window.addEventListener("load", Start);
 })();
+$('#contactForm').submit(function () {
+    $(this).find(':input[type=submit]').prop('disabled', true);
+    return false;
+});
 //# sourceMappingURL=app.js.map
