@@ -6,7 +6,7 @@ Date: June 20, 2022-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-left" >
     <div class="container-fluid">
        <!-- Icon-->
-      <a id="icon" class="navbar-brand" href="/"><img src="/assets/images/icon4.png" style=" margin-right:2px; margin-bottom: 5px;" alt="Page icon" width="30">nthony Wong</a>
+      <a class="navbar-brand" href="/"><img src="/assets/images/icon2.png" style=" margin-right:2px; margin-bottom: 5px;" alt="Page icon" width="180"> Personal Website</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,9 +26,9 @@ Date: June 20, 2022-->
           <li class="nav-item">
             <a class="nav-link <%= (page== 'services')? 'active' : ''; %>" aria-current="page" href="/services"> <i class="fa-solid fa-signs-post fa-lg"></i> Services</a>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link <%= (page== 'contact')? 'active' : ''; %>" aria-current="page" href="/contact"> <i class="fa-solid fa-user-pen fa-lg"></i> Contact Me</a>
-          </li> -->
+          </li>
           <!-- If display name exist, display the following links-->
           <% if(displayName) { %>
 
@@ -50,9 +50,9 @@ Date: June 20, 2022-->
             </a>
           <% } else { %>
           
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link <%= (page== 'login')? 'active' : ''; %>" aria-current="page" href="/login"> <i class="fa-solid fa-right-to-bracket fa-lg"></i></i> Login</a>
-          </li> -->
+          </li>
           
           <%} %>
         </ul>

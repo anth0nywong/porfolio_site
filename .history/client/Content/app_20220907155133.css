@@ -38,8 +38,6 @@ Date: June 20, 2022*/
     border-bottom-left-radius: 0;
 }
 
-
-
 .login
 {
     padding: 2rem 1rem;
@@ -76,7 +74,9 @@ Date: June 20, 2022*/
     top : 3px;
 }
 
-#icon
+
+
+body
 {
-    font-family: Cursive;
+    background-color: black;
 }

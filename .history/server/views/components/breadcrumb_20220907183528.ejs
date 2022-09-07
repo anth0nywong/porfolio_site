@@ -1,0 +1,17 @@
+<!-- File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022 -->
+
+<!-- Breadcrumb Page EJS -->
+<div class="container">
+    <div class="row">
+       <ol class="col-12 breadcrumb">
+           <li class="breadcrumb-item">
+            <% if (page != "home") { %> <a  href="/home" title="home">Home</a></li><% } else { %><p>Home</p><% } %>
+              
+           </li>
+            <% if (page != "home") { %><li class="breadcrumb-item"><%= title %></li><% } else { %><% } %>
+       </ol>
+   </div>
+</div>

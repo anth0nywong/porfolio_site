@@ -76,7 +76,43 @@ Date: June 20, 2022*/
     top : 3px;
 }
 
-#icon
+#homePage
 {
-    font-family: Cursive;
+  background-image: url(/images/IMG_1885.jpg);
+  background-size: 100% auto;
+  margin-top: 0px;
+  background-repeat: no-repeat;
+}
+
+#homePage a
+{
+    color:rgba(229, 196, 63, 0.872);
+}
+
+#homePage p
+{
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.header-color
+{
+    background-color: #ff050500;
+    position: fixed!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top:0px;
+    top:10px;
+    
+    background-color: #4a4a4a88;
+    
+}
+
+.header-color:hover
+{
+    border: solid;
+    border-radius:10px;
+    border-width: 1px;
+    border-color:rgba(240, 248, 255, 0.591);
+    transition:  2s;
 }
