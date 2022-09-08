@@ -1,0 +1,31 @@
+#header-color
+{
+    background-color: #ff050500;
+    position: fixed!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top:0px;
+    top:10px;
+    background-color: #4a4a4a88;
+    
+}
+ 
+#header-color:hover
+{
+    border: solid;
+    border-radius:10px;
+    border-width: 1px;
+    border-color:rgba(240, 248, 255, 0.591);
+    transition:  2s;
+    
+}
+
+
+.scroll-up .navbar #header-color {
+    transition: transform 0.3s;
+    transform: none;
+  }
+.scroll-down .navbar #header-color {
+    transition: transform 0.3s;
+    transform: translate3d(0, -120%, 0);
+}

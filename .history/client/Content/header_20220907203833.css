@@ -1,0 +1,28 @@
+#headerPage
+{
+    background-color: #ff050500;
+    position: fixed!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top:0px;
+    top:10px;
+    background-color: #4a4a4a88;
+    
+}
+ 
+#headerPage:hover
+{
+    border: solid;
+    border-radius:10px;
+    border-width: 1px;
+    transition:  2s;
+    
+}
+.scroll-up .navbar #headerPage {
+    transition: transform 0.3s;
+    transform: none;
+  }
+.scroll-down .navbar #headerPage {
+    transition: transform 0.3s;
+    transform: translate3d(0, -120%, 0);
+}

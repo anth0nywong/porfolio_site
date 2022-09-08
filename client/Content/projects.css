@@ -1,0 +1,21 @@
+#projectPage
+{
+    color: white;
+}
+
+#projectPage h1
+{
+    padding-top: 200px;
+    color:white;
+}
+
+.project-box
+{
+    padding-bottom: 150px;
+}
+
+.project-title
+{
+    padding-top: 75px;
+    padding-bottom: 75px;
+}

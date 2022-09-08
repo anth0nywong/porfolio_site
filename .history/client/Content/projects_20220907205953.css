@@ -1,0 +1,16 @@
+#projectPage
+{
+    color: white;
+}
+
+#projectPage h1
+{
+    padding-top: 200px;
+    color:white;
+}
+
+.project-box
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}

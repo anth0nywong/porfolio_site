@@ -1,0 +1,118 @@
+/* File name: Assignment2
+Student Name : Hok Hei Wong
+StudentID : 301193519
+Date: June 20, 2022*/
+
+.input-group-addon:first-child
+{
+    border-right: 0;
+}
+
+.input-group-addon
+{
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid darkgrey;
+    border-radius: 4xpx; 
+}
+
+.input-group-addon .fa
+{
+    font-size: 18px;
+}
+
+.input-group .form-control
+{
+    position:relative;
+    z-index: 2;
+    float:left;
+    margin-bottom: 0;
+}
+
+.input-group .form-control:last-child
+{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.login
+{
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: lightgrey;
+    border-radius: .3rem;
+}
+
+.login input
+{
+    background-color: white;
+    border-color: darkgrey;
+    border-radius: .4em;
+    width: 100%;
+}
+
+.pic
+{
+    box-shadow: 5px 5px 3px lightblue;
+}
+.picLinks
+{
+    position: relative;
+    box-shadow: 5px 5px 3px lightblue;
+}
+
+.picLinks:hover
+{
+    top : -3px;
+}
+
+.btn-link:hover
+{
+    top : 3px;
+}
+
+#icon
+{
+    font-family: Cursive;
+}
+
+#page
+{
+    background-color: black;
+    background-image: linear-gradient(180deg, rgb(20, 20, 28), rgb(114, 114, 114));
+    padding-bottom: 200px;
+}
+
+#aboutPage{
+    color: white;
+    height: 1200px;
+}
+
+#aboutPage a.text-muted{
+    color:rgba(229, 196, 63, 0.872);
+}
+
+#aboutPage h1
+{
+    padding-top: 200px;
+    color: rgb(179, 178, 178);
+}
+
+#aboutPage hr
+{
+    margin-bottom: 100px;
+}
+
+#aboutPage .aboutDetails
+{
+    text-align: left;
+}
+
+#profile-pic
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
